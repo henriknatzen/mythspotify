@@ -46,7 +46,7 @@ static HostLineEdit* MythSpotifyPassword() {
     gc->setLabel(QObject::tr("Spotify password"));
     gc->setValue("");
     gc->setHelpText(QObject::tr("Password is stored unencrypted in MythTVs database. "
-                    		"Make sure your system have sufficient security."));
+                    		"If left empty you will be prompted everytime the plugin is started."));
     return gc;
 };
 
