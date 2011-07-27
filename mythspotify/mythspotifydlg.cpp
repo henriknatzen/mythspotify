@@ -30,7 +30,7 @@ bool MythSpotifyDlg::Create() {
     UIUtilW::Assign(this, btnok, "btnok", &error); 
 
     if (error) {
-        VERBOSE(VB_IMPORTANT, "Cannot load screen 'popupdlg'");
+        LOG(VB_GENERAL, LOG_ERR, "Cannot load screen 'popupdlg'");
         return false;
     }
 
