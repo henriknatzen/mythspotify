@@ -68,7 +68,7 @@ bool MythSpotifyUI::Create() {
     UIUtilE::Assign(this, stateplaybackmode, "playbackmode", &error);
     
     if (error) {
-        VERBOSE(VB_IMPORTANT, "Cannot load screen 'mythspotifyui'");
+        LOG(VB_GENERAL, LOG_ERR, "Cannot load screen 'mythspotifyui'");
         return false;
     }
 
