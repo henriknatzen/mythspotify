@@ -143,7 +143,7 @@ void SpotifyStreamer::Search(const QString& query, int track_offset, int track_c
 
 bool SpotifyStreamer::Login(const QString& username, const QString& password) {
     m_spotifymutex->lock();
-    sp_session_login(m_session, username, password);
+    sp_session_login(m_session, username, password, false);
     m_spotifymutex->unlock();
     return true;
 }
@@ -339,7 +339,7 @@ void SpotifyStreamer::PlaylistAddTrack(Playlist*& playlist, Track*& track) {
     SpotifyPlaylist* spotifyplaylist = dynamic_cast<SpotifyPlaylist*>(playlist);
     SpotifyTrack* spotifytrack = dynamic_cast<SpotifyTrack*>(track);
     sp_playlist* spplaylist = spotifyplaylist->GetPlaylistObject();
-    const sp_track* sptrack[] = { spotifytrack->GetTrackObject() };
+    sp_track* sptrack[] = { spotifytrack->GetTrackObject() };
     
     sp_error error = SP_ERROR_OK;
     

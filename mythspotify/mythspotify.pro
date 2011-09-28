@@ -47,10 +47,10 @@ unix {
         #64bit
 
         DEFINES += "CALLBACK="
-        INCLUDEPATH += ../libs/libspotify-0.0.8-linux6-x86_64/include/
-        LIBS += -L../libs/libspotify-0.0.8-linux6-x86_64/lib -lspotify
+        INCLUDEPATH += ../libs/libspotify-9.1.32-Linux-x86_64/include/
+        LIBS += -L../libs/libspotify-9.1.32-Linux-x86_64/lib -lspotify
         libfiles.path = $${LIBDIR}
-        libfiles.files = ../libs/libspotify-0.0.8-linux6-x86_64/lib/lib*
+        libfiles.files = ../libs/libspotify-9.1.32-Linux-x86_64/lib/lib*
         INSTALLS += libfiles
     } else {
         #32bit
