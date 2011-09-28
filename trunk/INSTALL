@@ -13,11 +13,12 @@ Then run:
 
 Add the following in your library.xml file
 
-    <type>MYTHSPOTIFY</type>
+    <button>
+        <type>MYTHSPOTIFY</type>
         <text>Spotify</text>
         <description>Stream music from Spotify</description>
         <action>PLUGIN mythspotify</action>
-        depends>mythspotify</depends>
+        <depends>mythspotify</depends>
     </button>
  
 Add the following in your media_settings.xml file
