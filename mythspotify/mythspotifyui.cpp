@@ -7,7 +7,6 @@
 #include <QWaitCondition>
 #include <QMutex>
 // mythtv
-#include <mythlogging.h>
 #include <mythmainwindow.h>
 #include <mythuibuttonlist.h>
 #include <mythuitextedit.h>
@@ -68,7 +67,7 @@ bool MythSpotifyUI::Create() {
     UIUtilE::Assign(this, stateplaybackmode, "playbackmode", &error);
     
     if (error) {
-        LOG(VB_GENERAL, LOG_ERR, "Cannot load screen 'mythspotifyui'");
+        VERBOSE(VB_GENERAL, "Cannot load screen 'mythspotifyui'");
         return false;
     }
 
