@@ -1,9 +1,9 @@
 // qt
 #include <QVector>
 // mythtv
+#include <mythcontext.h>
 #include <mythuitext.h>
 #include <mythuibutton.h>
-#include <mythlogging.h>
 #include <mythdialogbox.h>
 // mythspotify
 #include "mythspotifydlg.h"
@@ -30,7 +30,7 @@ bool MythSpotifyDlg::Create() {
     UIUtilW::Assign(this, btnok, "btnok", &error); 
 
     if (error) {
-        LOG(VB_GENERAL, LOG_ERR, "Cannot load screen 'popupdlg'");
+        VERBOSE(VB_IMPORTANT, "Cannot load screen 'popupdlg'");
         return false;
     }
 
@@ -77,11 +77,6 @@ void MythSpotifyBusyDlg::slt_timeout() {
 void MythSpotifyBusyDlg::slt_close(bool result) {
 
     Close();
-    if(m_exit) {
-        QVector<MythScreenType*> screenlist;
-        m_parent->GetScreenList(screenlist);
-        MythScreenType* screen = screenlist.first();
-        screen->Close();
-    }
+    /*Gracefully exit main screen if possible*/
 }
 
