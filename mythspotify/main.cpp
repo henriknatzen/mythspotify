@@ -1,6 +1,7 @@
 // mythtv
-#include <mythpluginapi.h>
 #include <mythcontext.h>
+#include <mythplugin.h>
+#include <mythpluginapi.h>
 #include <mythversion.h>
 #include <myththemedmenu.h>
 #include <mythmainwindow.h>
@@ -15,7 +16,7 @@ static int RunMythSpotify();
 
 
 int mythplugin_init(const char* libversion) {
-    if (!gContext->TestPopupVersion("mythspotify", libversion, MYTH_BINARY_VERSION))
+    if (!gCoreContext->TestPluginVersion("mythspotify", libversion, MYTH_BINARY_VERSION))
         return -1;
 
     MythSpotifySettings settings;

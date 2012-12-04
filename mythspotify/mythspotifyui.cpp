@@ -435,7 +435,7 @@ void MythSpotifyUI::slt_search_clicked() {
     QString query = txtedtsearch->GetText();
     if(!query.isEmpty()) {
         CreateBusyDlg("search", tr("Searching for %1").arg(query), 45000, false);
-        musicstreamer->Search(query, 0, 50, 0, 0, 0, 0);
+        musicstreamer->Search(query, 0, 100, 0, 0, 0, 0);
     }
     
 }
