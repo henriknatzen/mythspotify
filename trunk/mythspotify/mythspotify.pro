@@ -28,6 +28,7 @@ INCLUDEPATH += $${PREFIX}/include/mythtv/libmythbase
 INCLUDEPATH += $${PREFIX}/include/mythtv/libmyth
 INCLUDEPATH += $${PREFIX}/include/mythtv/libmythui
 INCLUDEPATH += $${PREFIX}/include/mythtv/libmythdb
+INCLUDEPATH += $${PREFIX}/include/libspotify
 
 LIBS += -lmythavformat
 LIBS += -lmythavcodec
